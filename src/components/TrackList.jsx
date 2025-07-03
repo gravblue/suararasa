@@ -9,7 +9,6 @@ const TrackList = ({ tracks, playTrack, selectedTrack }) => {
     <div className="bg-gray-800 p-6 rounded-lg">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-semibold">Music that matches your feelings</h2>
-        <a href="#" className="text-indigo-400 hover:text-indigo-300 text-sm">View All</a>
       </div>
       
       {/* Song cards grid */}
