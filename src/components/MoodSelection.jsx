@@ -63,7 +63,7 @@ const MoodSelector = ({
           disabled={loading}
           className={`mb-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          {loading ? "⏳ Analyzing..." : "Analyzing your mood"}
+          {loading ? "⏳ Analyzing" : "Analyzing your mood"}
         </button>
       )}
       
