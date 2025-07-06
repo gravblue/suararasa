@@ -5,7 +5,7 @@ export const moods = [
   { title: "joy", emoji: "😄" },
   { title: "sadness", emoji: "😢" },
   { title: "surprise", emoji: "🕺🏽" },
-  { title: "fear", emoji: "🧘🏽‍♂️" },
+  { title: "fear", emoji: "😨" },
   { title: "anger", emoji: "😡" },
   { title: "love", emoji: "❤️" },
   { title: "neutral", emoji: "😐" }
