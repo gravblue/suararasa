@@ -36,7 +36,7 @@ export const getRecommendationsByMood = async (emotion, limit = 5) => {
   try {
     let query = `emotion=${encodeURIComponent(emotion)}&limit=${limit}&use_predefined=true`;
 
-    const response = await fetch(`https://back-end-production-05ff.up.railway.app/recommend-from-playlists?${query}`);
+    const response = await fetch(`https://nandaputric-j-hartmann.hf.space/detect-emotion`);
     
     if (!response.ok) {
       throw new Error(`API returned ${response.status}`);
