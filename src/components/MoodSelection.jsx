@@ -51,7 +51,7 @@ const MoodSelector = ({
       {/* Text input */}
       <textarea
         className="w-full p-4 bg-gray-700 text-white rounded-lg mb-2 resize-none border-none outline-none focus:ring-0"
-        placeholder="Let your feelings be heard..."
+        placeholder="Let your feelings be heard"
         rows="4"
         value={userText}
         onChange={handleTextInputChange}
