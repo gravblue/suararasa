@@ -106,7 +106,7 @@ export default function Mood() {
               loading || (!mood && !userText.trim()) ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
-            {loading ? "Searching for songs..." : "Find songs based on mood"}
+            {loading ? "Searching for songs" : "Find songs based on mood"}
           </button>
         </div>
 
