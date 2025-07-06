@@ -14,7 +14,7 @@ export const moods = [
 // API function to detect emotion
 export const detectEmotion = async (text) => {
   try {
-    const res = await fetch("https://nandaputric-j-hartmann.hf.space/detect-emotion", {
+    const res = await fetch("https://nandaputric-suararasa.hf.space/detect-emotion", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
@@ -36,7 +36,7 @@ export const getRecommendationsByMood = async (emotion, limit = 5) => {
   try {
     const query = `emotion=${encodeURIComponent(emotion)}&limit=${limit}&use_predefined=true`;
 
-    const response = await fetch(`https://nandaputric-j-hartmann.hf.space/recommend-from-playlists?${query}`);
+    const response = await fetch(`https://nandaputric-suararasa.hf.space/recommend-from-playlists?${query}`);
 
     if (!response.ok) {
       throw new Error(`API returned ${response.status}`);
@@ -60,7 +60,7 @@ export const analyzeAndRecommend = async (text, limit = 5) => {
   try {
     const query = `limit=${limit}&search_method=predefined`;
 
-    const response = await fetch(`https://nandaputric-j-hartmann.hf.space/analyze-and-recommend?${query}`, {
+    const response = await fetch(`https://nandaputric-suararasa.hf.space/analyze-and-recommend?${query}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
