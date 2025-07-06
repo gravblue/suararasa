@@ -14,7 +14,7 @@ export const moods = [
 // API functions
 export const detectEmotion = async (text) => {
   try {
-    const res = await fetch("https://back-end-production-05ff.up.railway.app/detect-emotion", {
+    const res = await fetch("https://nandaputric-j-hartmann.hf.space/detect-emotion", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
@@ -60,7 +60,7 @@ export const analyzeAndRecommend = async (text, limit = 5) => {
   try {
     let query = `limit=${limit}&search_method=predefined`; // Force predefined method
     
-    const response = await fetch(`https://back-end-production-05ff.up.railway.app/analyze-and-recommend?${query}`, {
+    const response = await fetch(`https://nandaputric-j-hartmann.hf.space/detect-emotion`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
