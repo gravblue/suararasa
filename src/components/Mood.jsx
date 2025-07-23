@@ -49,7 +49,11 @@ export default function Mood() {
       }
     } catch (error) {
       console.error("Error getting recommendations:", error);
-      setError("Failed to get recommendations. Please try again.");
+      if (error.response && error.response.data && error.response.data.detail) {
+        setError(error.response.data.detail); 
+      } else {
+        setError("Failed to get recommendations. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
