@@ -26,24 +26,18 @@ const MoodSelector = ({
     setUserText(text);
     const hasText = text.trim();
     setIsUsingTextInput(!!hasText);
-    if (!hasText) {
-      setDetectedEmotion(null);
-    }
-    if (hasText) {
-      setMood(null);
-    }
+    if (!hasText) setDetectedEmotion(null);
+    if (hasText) setMood(null);
   };
 
   const analyzeText = async () => {
     if (!userText.trim()) return;
-
     try {
       const emotionData = await detectEmotion(userText);
       setDetectedEmotion(emotionData.emotion);
       setMood(null);
-      setError(null);
-    } catch (error) {
-      setError(error.message || "Failed to analyze text. Please try selecting a mood directly.");
+    } catch {
+      setError("Oops! We need more than just numbers. Try describing your mood in words.");
     }
   };
 
@@ -56,14 +50,14 @@ const MoodSelector = ({
         value={userText}
         onChange={handleTextInputChange}
       />
-
+      
       {userText.trim() && (
         <button
           onClick={analyzeText}
           disabled={loading}
           className={`mb-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          {loading ? "Analyzing ⏳" : "Analyze your mood"}
+          {loading ? "Analyzing ⏳ " : "Analyzing your mood"}
         </button>
       )}
 
