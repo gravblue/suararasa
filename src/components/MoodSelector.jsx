@@ -37,7 +37,7 @@ const MoodSelector = ({
       setDetectedEmotion(emotionData.emotion);
       setMood(null);
     } catch {
-      setError("Oops! We need more than just numbers. Try describing your mood in words.");
+      setError("Hmm... that looks like a random string. Try writing a short sentence about how you feel.");
     }
   };
 
